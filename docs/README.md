@@ -28,7 +28,7 @@ pre-commit install
 ```shell
 pytest
 
-mypy --strict virus tests
+mypy --strict --enable-incomplete-feature=NewGenericSyntax virus tests
 
 pre-commit run --all-files
 ```
