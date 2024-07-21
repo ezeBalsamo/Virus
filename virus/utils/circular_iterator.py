@@ -16,12 +16,12 @@ class CircularIterator[T]:
     def from_items(cls, items: list[T]) -> Self:
         return cls(iterator=cycle(items))
 
-    def __attrs_post_init__(self) -> None:
+    def update_current(self) -> None:
         self.current = next(self.iterator)
 
-    def __iter__(self) -> Self:
-        return self
+    def __attrs_post_init__(self) -> None:
+        self.update_current()
 
     def __next__(self) -> T:
-        self.current = next(self.iterator)
+        self.update_current()
         return self.current
