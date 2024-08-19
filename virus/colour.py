@@ -6,3 +6,4 @@ class Colour(StrEnum):
     BLUE = "Blue"
     YELLOW = "Yellow"
     GREEN = "Green"
+    MULTICOLOR = "Multicolor"
