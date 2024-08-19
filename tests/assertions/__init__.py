@@ -1,1 +1,2 @@
+from .attributes import assert_attr_raises_not_blank
 from .enum import assert_expected_enum_values
